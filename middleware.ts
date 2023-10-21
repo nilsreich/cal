@@ -39,15 +39,9 @@ export async function middleware(req: NextRequest) {
 
   // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   // If you have one
-  if (
-    [
-      "/manifest.json",
-      "/favicon.ico",
-      '/service-worker.js'
-      // Your other files in `public`
-    ].includes(pathname)
-  )
-    return;
+  if (pathname.startsWith('/public/')) {
+    return; 
+  }
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
