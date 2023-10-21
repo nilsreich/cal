@@ -43,7 +43,7 @@ export async function middleware(req: NextRequest) {
     [
       "/manifest.json",
       "/favicon.ico",
-      '/sw.js'
+      '/service-worker.js'
       // Your other files in `public`
     ].includes(pathname)
   )
