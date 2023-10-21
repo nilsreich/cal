@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
@@ -43,6 +43,19 @@ export const metadata: Metadata = {
       default: APP_DEFAULT_TITLE,
       template: APP_TITLE_TEMPLATE,
     },
+    images: [
+      {
+        url: "https://nextjs.org/og.png",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://nextjs.org/og-alt.png",
+        width: 1800,
+        height: 1600,
+        alt: "My custom alt",
+      },
+    ],
     description: APP_DESCRIPTION,
   },
   twitter: {
